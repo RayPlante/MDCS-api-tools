@@ -789,6 +789,8 @@ def xsd_smart_upload(args):
 # executable code
 #-------------------------------------------------------------------------------
 args = get_function_args()
+if 'cert' in args and args['cert'] == 'False':
+    args['cert'] = False
 n = sum([
     args['curate'],
     args['blob'],
